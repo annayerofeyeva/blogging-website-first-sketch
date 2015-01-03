@@ -54,9 +54,9 @@ namespace BloggingWebsiteV1._0
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: Environment.GetEnvironmentVariable("FB_APP_ID", EnvironmentVariableTarget.User),
+               appSecret: Environment.GetEnvironmentVariable("FB_APP_SECRET", EnvironmentVariableTarget.User));
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
